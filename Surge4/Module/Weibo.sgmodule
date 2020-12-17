@@ -1,4 +1,4 @@
-#!name= 微博去广告
+#!name= weibo
 
 [MITM]
 hostname = %INSERT% api.weibo.cn,mapi.weibo.com,*.uve.weibo.com
