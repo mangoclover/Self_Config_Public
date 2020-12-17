@@ -1,4 +1,4 @@
-#!name=eval_script.js module
+#!name=微博去广告
 
 [MITM]
 hostname = %INSERT% api.weibo.cn,mapi.weibo.com,*.uve.weibo.com
