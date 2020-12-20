@@ -43,4 +43,4 @@ jobs:
           author_email: test
           message: 'auto update'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: 7febfbdbf0ad4c87e162ffb7d4726cf37c1a8a89
