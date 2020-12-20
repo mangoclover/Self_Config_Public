@@ -1,14 +1,14 @@
 # 特别声明
 
-* 本项目内所有资源文件，禁止任何公众号、自媒体进行任何形式的转载、发布。
-- 编写本项目主要目的为学习和研究，无法保证项目内容的合法性、准确性、完整性和有效性。
-- 本项目涉及的数据由使用的个人或组织自行填写，本项目不对数据内容负责，包括但不限于数据的真实性、准确性、合法性。使用本项目所造成的一切后果，与本项目的所有贡献者无关，由使用的个人或组织完全承担。 
-- 本项目中涉及的第三方硬件、软件等，与本项目没有任何直接或间接的关系。
-- 本项目仅对部署和使用过程进行客观描述，不代表支持使用任何第三方硬件、软件。使用任何第三方硬件、软件，所造成的一切后果由使用的个人或组织承担，与本项目无关。
-- 本项目中所有内容只供学习和研究使用，不得将本项目中任何内容用于违反国家/地区/组织等的法律法规或相关规定的其他用途。
-- 所有基于本项目源代码，进行的任何修改，为其他个人或组织的自发行为，与本项目没有任何直接或间接的关系，所造成的一切后果亦与本项目无关。
-- 所有直接或间接使用本项目的个人和组织，应24小时内完成学习和研究，并及时删除本项目中的所有内容。如对本项目的功能有需求，应自行开发相关功能。
-* 本项目保留随时对免责声明进行补充或更改的权利，直接或间接使用本项目内容的个人或组织，视为接受本项目的特别声明。
+* All resource files in this project are prohibited from being reproduced and published in any form by any official account or self-media.
+- The main purpose of writing this project is learning and research, and the legality, accuracy, completeness and effectiveness of the project content cannot be guaranteed.
+- The data involved in this project is filled out by the individual or organization using it. This project is not responsible for the content of the data, including but not limited to the authenticity, accuracy, and legality of the data. All the consequences of using this project have nothing to do with all contributors of this project, and are fully borne by the individual or organization using it. 
+- The third-party hardware and software involved in this project have no direct or indirect relationship with this project.
+- This project only provides an objective description of the deployment and use process, and does not mean that it supports the use of any third-party hardware and software. All consequences caused by the use of any third-party hardware and software shall be borne by the individual or organization that uses it, and has nothing to do with this project.
+- All content in this project is for learning and research use only, and any content in this project may not be used for other purposes that violate the laws, regulations, or relevant regulations of countries/regions/organizations.
+- All modifications based on the source code of this project are self-issued by other individuals or organizations, and have no direct or indirect relationship with this project, and all the consequences caused have nothing to do with this project.
+- All individuals and organizations that directly or indirectly use this project should complete their studies and research within 24 hours, and delete all content in this project in time. If there is a need for the functions of this project, relevant functions should be developed by themselves.
+* This project reserves the right to supplement or change the disclaimer at any time. Individuals or organizations that directly or indirectly use the content of this project are deemed to accept the special statement of this project.
 
 
 # Special thanks to
