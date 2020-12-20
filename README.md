@@ -14,7 +14,7 @@
 This  project is only applicable to **[Surge](https://nssurge.com)。**
 > Surge is a network toolbox for power users and a high-performance HTTP/SOCKS5 proxy server.
 
-# ⚠️Attention
+# Attention
 > * **DOMAIN-SET** is also applicable to Surge for Mac v3.5.1 and newer versions, Surge for iOS v4.2.2 and newer versions. It has better matching efficiency than RULE-SET, and it is recommended to use it first.
 > * **RULE-SET** is also applicable to Surge for Mac v3.0 and newer versions, Surge for iOS v3.4 and newer versions.
 
