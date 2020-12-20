@@ -11,8 +11,8 @@
 * This project reserves the right to supplement or change the disclaimer at any time. Individuals or organizations that directly or indirectly use the content of this project are deemed to accept the special statement of this project.
 
 # ⚠️Attention
-* > DOMAIN-SET is also applicable to Surge for Mac v3.5.1 and newer versions, Surge for iOS v4.2.2 and newer versions. It has better matching efficiency than RULE-SET, and it is recommended to use it first.
-
+> * DOMAIN-SET is also applicable to Surge for Mac v3.5.1 and newer versions, Surge for iOS v4.2.2 and newer versions. It has better matching efficiency than RULE-SET, and it is recommended to use it first.
+> * RULE-SET is also applicable to Surge for Mac v3.0 and newer versions, Surge for iOS v3.4 and newer versions.
 # Special thanks to
 *  [Scomper](https://github.com/scomper/Surge) 
 *  [ConnersHua](https://github.com/DivineEngine/Profiles) 
