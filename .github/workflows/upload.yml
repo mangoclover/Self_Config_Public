@@ -25,7 +25,7 @@ jobs:
         id: ossutil
         uses: go-choppy/ossutil-github-action@master
         with:
-          ossArgs: 'cp oss://nordata-cdn/choppy/about-us.md ./'
+          ossArgs: ${{ secrets.OSS_ARGS }}
           accessKey: ${{ secrets.ALIYUN_ACCESS_KEY }}
           accessSecret: ${{ secrets.ALIYUN_ACCESS_SECRET }}
           endpoint: oss-cn-shanghai.aliyuncs.com
