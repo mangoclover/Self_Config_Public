@@ -39,8 +39,8 @@ jobs:
         uses: EndBug/add-and-commit@v5
         with:
           add: 'domain-set-test'
-          author_name: Roy Li
-          author_email: me@dada.li
+          author_name: test
+          author_email: test
           message: 'auto update'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
