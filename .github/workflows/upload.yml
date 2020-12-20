@@ -22,8 +22,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Upload files
-        id: github-action
-        uses: go-choppy/github-action-github-action@main
+        id: ossutil
+        uses: go-choppy/ossutil-github-action@master
         with:
           ossArgs: ${{ secrets.OSS_ARGS }}
           accessKey: ${{ secrets.ALIYUN_ACCESS_KEY }}
