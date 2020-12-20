@@ -28,7 +28,7 @@ jobs:
           ossArgs: ${{ secrets.OSS_ARGS }}
           accessKey: ${{ secrets.ALIYUN_ACCESS_KEY }}
           accessSecret: ${{ secrets.ALIYUN_ACCESS_SECRET }}
-          endpoint:"oss-cn-hongkong.aliyuncs.com"
+          endpoint: "oss-cn-hongkong.aliyuncs.com"
 
       - name: Output command
         run: echo "${{steps.ossutil.outputs.command}}"
