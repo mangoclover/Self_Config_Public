@@ -11,7 +11,6 @@
 * This project reserves the right to supplement or change the disclaimer at any time. Individuals or organizations that directly or indirectly use the content of this project are deemed to accept the special statement of this project.
 
 # 𝗜𝗻𝘁𝗿𝗼𝗱𝘂𝗰𝘁𝗶𝗼𝗻
-
 This  project is only applicable to **[Surge](https://nssurge.com)。**
 > Surge is a network toolbox for power users and a high-performance HTTP/SOCKS5 proxy server.
 
@@ -22,3 +21,6 @@ This  project is only applicable to **[Surge](https://nssurge.com)。**
 # 𝗦𝗽𝗲𝗰𝗶𝗮𝗹 𝘁𝗵𝗮𝗻𝗸𝘀 𝘁𝗼
 *  [Scomper](https://github.com/scomper/Surge) 
 *  [ConnersHua](https://github.com/DivineEngine/Profiles) 
+
+# 𝗖𝗼𝗻𝘁𝗮𝗰𝘁
+> If you have any questions, please contact:[𝗣𝗼𝗿𝘁𝗮𝗹](https://netflav.com) 
