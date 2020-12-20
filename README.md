@@ -10,6 +10,8 @@
 - All individuals and organizations that directly or indirectly use this project should complete their studies and research within 24 hours, and delete all content in this project in time. If there is a need for the functions of this project, relevant functions should be developed by themselves.
 * This project reserves the right to supplement or change the disclaimer at any time. Individuals or organizations that directly or indirectly use the content of this project are deemed to accept the special statement of this project.
 
+# ⚠️Attention
+* > DOMAIN-SET is also applicable to Surge for Mac v3.5.1 and newer versions, Surge for iOS v4.2.2 and newer versions. It has better matching efficiency than RULE-SET, and it is recommended to use it first.
 
 # Special thanks to
 *  [Scomper](https://github.com/scomper/Surge) 
