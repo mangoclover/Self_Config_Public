@@ -13,4 +13,4 @@
 
 # Special thanks to
 *  [Scomper](https://github.com/scomper/Surge) 
-*  [DivineEngine](https://github.com/DivineEngine/Profiles) 
+*  [ConnersHua](https://github.com/DivineEngine/Profiles) 
