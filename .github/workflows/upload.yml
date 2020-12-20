@@ -23,7 +23,7 @@ jobs:
 
       - name: Upload files
         id: ossutil
-        uses: go-choppy/ossutil-github-action@main
+        uses: go-choppy/ossutil-github-action@master
         with:
           ossArgs: ${{ secrets.OSS_ARGS }}
           accessKey: ${{ secrets.ALIYUN_ACCESS_KEY }}
