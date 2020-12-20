@@ -11,7 +11,7 @@
 * This project reserves the right to supplement or change the disclaimer at any time. Individuals or organizations that directly or indirectly use the content of this project are deemed to accept the special statement of this project.
 
 # Introduction
-This  project is only applicable to `［Surge](https://nssurge.com)`。
+This  project is only applicable to `[Surge](https://nssurge.com)`。
 > Surge is a network toolbox for power users and a high-performance HTTP/SOCKS5 proxy server.
 
 # ⚠️Attention
