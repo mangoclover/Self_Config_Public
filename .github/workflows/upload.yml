@@ -25,7 +25,7 @@ jobs:
         id: ossutil
         uses: go-choppy/ossutil-github-action@master
         with:
-          ossArgs: ${{ secrets.OSS_ARGS }}
+          ossArgs: 'cp -r -u ./ oss://github-action-domain-set'
           accessKey: ${{ secrets.ALIYUN_ACCESS_KEY }}
           accessSecret: ${{ secrets.ALIYUN_ACCESS_SECRET }}
           endpoint: oss-cn-shanghai.aliyuncs.com
