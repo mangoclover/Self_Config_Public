@@ -1,0 +1,10 @@
+#!name=Weibo Host
+#!desc=Weibo DNS 映射
+
+[Host]
+weibo.cn = server:117.50.10.10
+weibo.com = server:117.50.10.10
+weibocdn.com = server:117.50.10.10
+sina.com = server:117.50.10.10
+sinaimg.com = server:117.50.10.10
+xiaoka.tv = server:117.50.10.10
