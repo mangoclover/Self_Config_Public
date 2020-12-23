@@ -1,5 +1,5 @@
-#!name=Weibo Host
-#!desc=Weibo DNS 映射
+#!name=Apple Host
+#!desc=Apple DNS 映射
 
 [Host]
 iosapps.itunes.apple.com = 117.144.227.97
