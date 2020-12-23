@@ -3,22 +3,22 @@
 
 [Host]
 # Apple Music音频 与 App Store下载
-iosapps.itunes.apple.com = 117.144.227.97
+iosapps.itunes.apple.com = 17.253.85.207
 # Apple Music音频 与 App Store下载
-streamingaudio.itunes.apple.com = 117.144.227.97
+streamingaudio.itunes.apple.com = 17.253.85.207
 # Apple Music音频 与 App Store下载
-aod.itunes.apple.com = 117.144.227.97
+aod.itunes.apple.com = 17.253.85.207
 # Apple Music广播
-radio.itunes.apple.com = 184.87.100.246
+radio.itunes.apple.com = 17.253.85.207
 # Apple Music广播
-radio-services.itunes.apple.com = 184.87.100.246
+radio-services.itunes.apple.com = 17.253.85.207
 # Apple Music广播
-radio-activity.itunes.apple.com = 184.87.100.246
+radio-activity.itunes.apple.com = 17.253.85.207
 # Apple流媒体
-search.itunes.apple.com = 184.87.97.50
+search.itunes.apple.com = 17.253.85.207
 # Apple流媒体
-play.itunes.apple.com = 118.123.106.105
+play.itunes.apple.com = 17.253.85.207
 # iTunes相关服务
-upp.itunes.apple.com = 118.123.106.105
+upp.itunes.apple.com = 17.253.85.207
 # Apple iTunes服务
-client-api.itunes.apple.com = 118.123.106.105
+client-api.itunes.apple.com = 17.253.85.207
