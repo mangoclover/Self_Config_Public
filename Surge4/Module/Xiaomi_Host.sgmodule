@@ -1,0 +1,12 @@
+#!name=Xiaomi Host
+#!desc=Xiaomi DNS 映射
+
+[Host]
+mi.com = server:119.29.29.29
+*.mi.com = server:119.29.29.29
+xiaomi.com = server:119.29.29.29
+*.xiaomi.com = server:119.29.29.29
+duokan.com = server:119.29.29.29
+mi-img.com = server:119.29.29.29
+xiaomi.net = server:119.29.29.29
+xiaomicp.com = server:119.29.29.29
