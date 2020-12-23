@@ -1,0 +1,14 @@
+#!name=bilibili Host
+#!desc=bilibili DNS 映射
+
+[Host]
+bilibili.com = server:117.50.10.10
+*.bilibili.com = server:117.50.10.10
+acg.tv = server:117.50.10.10
+acgvideo.com = server:117.50.10.10
+b23.tv = server:117.50.10.10
+biliapi.com = server:117.50.10.10
+biliapi.net = server:117.50.10.10
+bilibili.tv = server:117.50.10.10
+bilivideo.com = server:117.50.10.10
+*bili* = server:117.50.10.10
