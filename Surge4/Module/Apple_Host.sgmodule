@@ -2,9 +2,9 @@
 #!desc=Weibo DNS 映射
 
 [Host]
-iosapps.itunes.apple.com = 182.140.218.60
-streamingaudio.itunes.apple.com = 182.140.218.60
-aod.itunes.apple.com = 182.140.218.60
+iosapps.itunes.apple.com = 117.144.227.97
+streamingaudio.itunes.apple.com = 117.144.227.97
+aod.itunes.apple.com = 117.144.227.97
 radio.itunes.apple.com = 184.87.100.246
 radio-services.itunes.apple.com = 184.87.100.246
 radio-activity.itunes.apple.com = 184.87.100.246
