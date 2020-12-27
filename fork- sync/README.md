@@ -2,7 +2,7 @@
 
 ## GitHub Actions 简介
 
-**Github Actions** 是 **Github** 的一项功能, 可以帮我们做一些程序化的 **CI/CD** 的事情, 并且完全免费. 这样我们就可以解放双手了, 更多 **Github Actions** 相关介绍可以去看官方文档.
+`Automate your workflow from idea to production. GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub. Make code reviews, branch management, and issue triaging work the way you want.`
 
 使用它来做 fork 同步也很简单, 只需创建个配置文件 `.github/workflows/sync.yml`:
 
