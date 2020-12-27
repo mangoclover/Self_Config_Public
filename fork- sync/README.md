@@ -9,7 +9,7 @@ Make code reviews, branch management, and issue triaging work the way you want.
 ```
 
 ## 2、配置文件
-利用GitHub Actions 来做 fork 同步也很简单, 只需创建个配置文件 `.github/workflows/sync.yml`:
+先 for 一个仓库，然后创建配置文件 `.github/workflows/sync.yml`利用GitHub Actions 来做 fork 同步,具体如下:
 
 ``` 
 # .github/workflows/sync.yml
