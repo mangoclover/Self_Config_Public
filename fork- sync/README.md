@@ -1,5 +1,7 @@
 # 使用 Github Actions 实现自动同步更新源仓库代码
 
+## GitHub Actions 简介
+
 **Github Actions** 是 **Github** 的一项功能, 可以帮我们做一些程序化的 **CI/CD** 的事情, 并且完全免费. 这样我们就可以解放双手了, 更多 **Github Actions** 相关介绍可以去看官方文档.
 
 使用它来做 fork 同步也很简单, 只需创建个配置文件 `.github/workflows/sync.yml`:
