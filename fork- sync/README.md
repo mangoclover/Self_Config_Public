@@ -23,4 +23,5 @@ jobs:
           head: master # fork 上游项目需要同步的分支
           base: master # 需要同步到本项目的目标分支 
 ```     
-配置好以后, 如果上游项目更新的话, 我们的 **action** 会在触发时帮我们更新代码, 会创建 **pr** 并且会自动 **merge**. 更多参数请查看 [Marketplace/Actions/Fork Sync]（https://github.com/marketplace/actions/fork-sync）
+配置好以后, 如果上游项目更新的话, 我们的 **action** 会在触发时帮我们更新代码, 会创建 **pr** 并且会自动 **merge**. 更多参数请查看 
+[Marketplace/Actions/Fork Sync]（https://github.com/marketplace/actions/fork-sync）
