@@ -1,11 +1,11 @@
 # 使用 Github Actions 实现自动同步更新源仓库代码
-***
+
 ## 1、GitHub Actions 简介
 
     Automate your workflow from idea to production.
     GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub.
     Make code reviews, branch management, and issue triaging work the way you want.
-***
+
 ## 2、配置文件
 利用GitHub Actions 来做 fork 同步也很简单, 只需创建个配置文件 `.github/workflows/sync.yml`:
 
