@@ -2,11 +2,9 @@
 
 ## 1、GitHub Actions 简介
 
-```
-  Automate your workflow from idea to production.
-  GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub.
-  Make code reviews, branch management, and issue triaging work the way you want.
-```
+> Automate your workflow from idea to production.
+> GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub.
+> Make code reviews, branch management, and issue triaging work the way you want.
 
 ## 2、配置文件
 先 for 一个仓库，然后创建配置文件 `.github/workflows/sync.yml`利用GitHub Actions 来做 fork 同步,具体如下:
