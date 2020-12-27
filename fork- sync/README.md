@@ -2,6 +2,11 @@
 
 ## 1、GitHub Actions 简介
 
+GitHub Actions 帮助您自动完成软件开发周期内的任务。 GitHub Actions 是事件驱动的，意味着您可以在指定事件发生后运行一系列命令。 例如，每次有人为仓库创建拉取请求时，您都可以自动运行命令来执行软件测试脚本。
+
+此示意图说明如何使用 GitHub Actions 自动运行软件测试脚本。 事件会自动触发其中包作业的工作流程。 然后，作业使用步骤来控制操作运行的顺序。 这些操作是自动化软件测试的命令。
+![](https://docs.github.com/assets/images/help/images/overview-actions-simple.png "流程图")
+
 > Automate your workflow from idea to production.
 > GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub.
 > Make code reviews, branch management, and issue triaging work the way you want.
