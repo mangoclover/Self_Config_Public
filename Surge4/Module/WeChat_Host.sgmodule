@@ -1,7 +1,0 @@
-#!name= WeChat Host
-#!desc= WeChat DNS 映射
-
-[Host]
-weixin.com = server:117.50.10.10
-*.weixin.com = server:117.50.10.10
-*weixin.com = server:117.50.10.10
