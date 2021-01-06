@@ -1,4 +1,4 @@
-#!name= DH-DoH
+#!name=DH-DoH
 #!desc=Enable DNS over HTTPS (DoH) with DH-DoH.
 
 [General]
