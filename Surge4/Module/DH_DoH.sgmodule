@@ -1,5 +1,5 @@
-#!name= DH-Doh
-#!desc=Enable DNS over HTTPS (DoH) with DH-Doh.
+#!name= DH-DoH
+#!desc=Enable DNS over HTTPS (DoH) with DH-DoH.
 
 [General]
 doh-server = https://cdn-doh.ssnm.xyz/dns-query
