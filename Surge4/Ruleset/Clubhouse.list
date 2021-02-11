@@ -1,5 +1,5 @@
 # > Clubhouse
-# 此配置需代理服务器支持且开启 udp-relay
+# 此配置需代理服务器支持且开启 udp-relay 功能。
 DOMAIN-SUFFIX,clubhouseapi.com
 DOMAIN-SUFFIX,joinclubhouse.com
 DOMAIN,clubhouseprod.s3.amazonaws.com
