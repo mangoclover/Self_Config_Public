@@ -1,6 +1,5 @@
-#!name=Surge自动策略
-#!desc=根据当前网络自动切换模式
+#!name=Surge自动切换模式
+#!desc=根据当前网络自动切换模式（Wi-Fi下选择DIRECT模式，Cellular下选择RULE模式）
 
 [Script]
-
 event network-changed script-path=https://raw.githubusercontent.com/mangoclover/Self_Config_Public/master/Surge4/JS/Auto-Mode.js
