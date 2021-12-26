@@ -1,5 +1,5 @@
-const WIFI_DONT_NEED_PROXYS = ['PHICOMM_5G'];
-const CURRENT_WIFI_SSID_KEY = 'PHICOMM_5G';
+const WIFI_DONT_NEED_PROXYS = ['PHICOMM_5G','PHICOMM_2.4G'];
+const CURRENT_WIFI_SSID_KEY = 'current_wifi_ssid';
 
 if (wifiChanged()) {
   const mode = WIFI_DONT_NEED_PROXYS.includes($network.wifi.ssid)
