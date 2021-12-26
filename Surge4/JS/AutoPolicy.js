@@ -1,22 +1,22 @@
 /**
- * 自动策略 Surge & Loon，根据当前网络自动切换策略组，主要用于搭配软路由等使用。
- * 由于运行模式的全局直连下，去广告，网易云等分流也会失效，使用此脚本完全解决了此类问题。
+ * Surge & Loon 的运行模式，根据当前网络自动切换模式，此脚本思路来自于Quantumult X。
  * @author: Peng-YM
- * 更新地址: https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/AutoPolicy/auto-policy.js
+ * 更新地址: https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/RunningMode/running-mode.js
  *
  *************** Surge配置 ***********************
  * 推荐使用模块：
- * https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/AutoPolicy/auto-policy.sgmodule
+ * https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/RunningMode/running-mode.sgmodule
  * 手动配置：
  * [Script]
- * event network-changed script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/AutoPolicy/auto-policy.js
+ * event network-changed script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/RunningMode/running-mode.js
  *
  *************** Loon配置 ***********************
  * 推荐使用插件：
- * https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/AutoPolicy/auto-policy.plugin
+ * https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/RunningMode/running-mode.plugin
  * 手动配置：
  * [Script]
- * network-changed script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/AutoPolicy/auto-policy.js
+ * network-changed script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/RunningMode/running-mode.js
+ *
  *************** 脚本配置 ***********************
  * 推荐使用BoxJS配置。
  * BoxJS订阅：https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/box.js.json
@@ -24,133 +24,73 @@
  */
 
 let config = {
-  global_direct: "DIRECT",
-  global_proxy: "PROXY",
   silence: false, // 是否静默运行，默认false
   cellular: "RULE", // 蜂窝数据下的模式，RULE代表规则模式，PROXY代表全局代理，DIRECT代表全局直连
-  wifi: "DIRECT", // wifi下默认的模式
-  all_direct: ["PHICOMM_5G", "PHICOMM_2.4G"], // 指定全局直连的wifi名字
+  wifi: "RULE", // wifi下默认的模式
+  all_direct: ["WRT32X", "WRT32X Extreme"], // 指定全局直连的wifi名字
   all_proxy: [], // 指定全局代理的wifi名字
-  whitelist: [],
 };
 
-const isLoon = typeof $loon !== "undefined";
-const isSurge = typeof $httpClient !== "undefined" && !isLoon;
-
 // load user prefs from box
-const boxConfig = $persistentStore.read("surge_auto_policy");
+const boxConfig = $persistentStore.read("surge_running_mode");
 if (boxConfig) {
   config = JSON.parse(boxConfig);
   config.silence = JSON.parse(config.silence);
-  config.all_direct = listify(config.all_direct);
-  config.all_proxy = listify(config.all_proxy);
-  config.whitelist = listify(config.whitelist);
+  config.all_direct = JSON.parse(config.all_direct);
+  config.all_proxy = JSON.parse(config.all_proxy);
 }
 
-// get current decisions
-let groups, ssid;
-if (isSurge) {
-  groups = Object.keys($surge.selectGroupDetails().groups);
-  ssid = $network.wifi.ssid;
-} else if (isLoon) {
-  const conf = JSON.parse($config.getConfig());
-  groups = conf.all_policy_groups;
-  ssid = conf.ssid;
-}
+const isLoon = typeof $loon !== "undefined";
+const isSurge = typeof $httpClient !== "undefined" && !isLoon;
+const MODE_NAMES = {
+  RULE: "🚦规则模式",
+  PROXY: "🚀全局代理模式",
+  DIRECT: "🎯全局直连模式",
+};
 
-manager()
-  .catch((err) => {
-    notify.post("🤖️ SSID 自动策略", `❌ 出现错误`, err);
-    console.log("ERROR: " + err);
-  })
-  .finally(() => {
-    $done();
-  });
+manager();
+$done();
 
-async function manager() {
-  // get current outbound mode
-  const previousMode =
-    $persistentStore.read("surge_auto_policy_mode") || "RULE";
+function manager() {
+  let ssid;
+  let mode;
 
-  console.log(`Previous outbound mode: ${previousMode}`);
-
-  // no network connection
   if (isSurge) {
     const v4_ip = $network.v4.primaryAddress;
+    // no network connection
     if (!config.silence && !v4_ip) {
-      notify.post("🤖️ SSID 自动策略", "❌ 当前无网络", "");
+      notify("🤖 Surge 运行模式", "❌ 当前无网络", "");
       return;
     }
+    ssid = $network.wifi.ssid;
+    mode = ssid ? lookupSSID(ssid) : config.cellular;
+    const target = {
+      RULE: "rule",
+      PROXY: "global-proxy",
+      DIRECT: "direct",
+    }[mode];
+    $surge.setOutboundMode(target);
+  } else if (isLoon) {
+    const conf = JSON.parse($config.getConfig());
+    ssid = conf.ssid;
+    mode = ssid ? lookupSSID(ssid) : config.cellular;
+    const target = {
+      DIRECT: 0,
+      RULE: 1,
+      PROXY: 2,
+    }[mode];
+    $config.setRunningModel(target);
   }
-
-  const targetMode = ssid ? getSSIDMode(ssid) : config.cellular;
-
-  console.log(`Switch from mode ${previousMode} to ${targetMode}`);
-
-  if (previousMode === "RULE" && targetMode !== "RULE") {
-    // save decisions before executing switch
-    saveDecisions();
-    // execute policy switch
-    for (let group of groups) {
-      if (config.whitelist.indexOf(group) !== -1) continue;
-      const decision =
-        targetMode === "PROXY" ? config.global_proxy : config.global_direct;
-      if (isSurge) {
-        $surge.setSelectGroupPolicy(group, decision);
-      } else if (isLoon) {
-        $config.setSelectPolicy(group, decision);
-      }
-      console.log(`Switch Policy: ${group} ==> ${decision}`);
-    }
-  }
-  if (previousMode !== "RULE" && targetMode === "RULE") {
-    // load decisions
-    restoreDecisions();
-  }
-
-  $persistentStore.write(targetMode, "surge_auto_policy_mode");
   if (!config.silence) {
     notify(
-      "🤖️ SSID 自动策略",
+      `🤖 ${isSurge ? "Surge" : "Loon"} 运行模式`,
       `当前网络：${ssid ? ssid : "蜂窝数据"}`,
-      `${isSurge ? "Surge" : "Loon"}已切换至${lookupOutbound(targetMode)}`
+      `${isSurge ? "Surge" : "Loon"} 已切换至${MODE_NAMES[mode]}`
     );
   }
 }
 
-function saveDecisions() {
-  // get current policy groups
-  let decisions;
-  if (isSurge) {
-    decisions = $surge.selectGroupDetails().decisions;
-  } else if (isLoon) {
-    const conf = JSON.parse($config.getConfig());
-    decisions = conf.policy_select;
-  }
-  for (let d of Object.keys(decisions)) {
-    if (groups.indexOf(d) === -1) delete decisions[d];
-  }
-  $persistentStore.write(
-    JSON.stringify(decisions),
-    "surge_auto_policy_decisions"
-  );
-}
-
-function restoreDecisions() {
-  const decisions = JSON.parse(
-    $persistentStore.read("surge_auto_policy_decisions")
-  );
-  for (let group of groups) {
-    if (isSurge) {
-      $surge.setSelectGroupPolicy(group, decisions[group]);
-    } else if (isLoon) {
-      $config.setSelectPolicy(group, decisions[group]);
-    }
-    console.log(`Restore Policy: ${group} ==> ${decisions[group]}`);
-  }
-}
-
-function getSSIDMode(ssid) {
+function lookupSSID(ssid) {
   const map = {};
   config.all_direct.map((id) => (map[id] = "DIRECT"));
   config.all_proxy.map((id) => (map[id] = "PROXY"));
@@ -159,27 +99,12 @@ function getSSIDMode(ssid) {
   return matched ? matched : config.wifi;
 }
 
-function lookupOutbound(mode) {
-  return {
-    RULE: "🚦规则模式",
-    PROXY: "🚀全局代理模式",
-    DIRECT: "🎯全局直连模式",
-  }[mode];
-}
-
-function listify(str, sperator = ",") {
-  return str.split(sperator).map((i) => i.trim());
-}
-
 function notify(title, subtitle, content) {
-  const TIMESTAMP_KEY = "auto_policy_notified_time";
-  const THROTTLE_TIME = 1 * 1000;
-  const lastNotifiedTime = $persistentStore.read(TIMESTAMP_KEY);
-  if (
-    !lastNotifiedTime ||
-    new Date().getTime() - lastNotifiedTime > THROTTLE_TIME
-  ) {
-    $persistentStore.write(new Date().getTime().toString(), TIMESTAMP_KEY);
+  const SUBTITLE_STORE_KEY = "running_mode_notified_subtitle";
+  const lastNotifiedSubtitle = $persistentStore.read(SUBTITLE_STORE_KEY);
+
+  if (!lastNotifiedSubtitle || lastNotifiedSubtitle !== subtitle) {
+    $persistentStore.write(subtitle.toString(), SUBTITLE_STORE_KEY);
     $notification.post(title, subtitle, content);
   }
-}
+}   
