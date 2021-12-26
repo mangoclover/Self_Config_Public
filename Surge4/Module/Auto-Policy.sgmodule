@@ -3,4 +3,4 @@
 
 [Script]
 
-event network-changed script-path=https://raw.githubusercontent.com/mangoclover/Self_Config_Public/master/Surge4/JS/AutoPolicy.js
+event network-changed script-path=https://raw.githubusercontent.com/mangoclover/Self_Config_Public/master/Surge4/JS/Auto-Mode.js
