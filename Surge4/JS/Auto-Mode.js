@@ -3,13 +3,13 @@ const CURRENT_WIFI_SSID_KEY = 'PHICOMM_5G';
 
 if (wifiChanged()) {
   const mode = WIFI_DONT_NEED_PROXYS.includes($network.wifi.ssid)
-    ? 'direct'
-    : 'rule';
+    ? 'DIRECT'
+    : 'RULE';
   $surge.setOutboundMode(mode);
   $notification.post(
     'Surge',
     `Wi-Fi changed to ${$network.wifi.ssid || 'cellular'}`,
-    `use ${mode} mode`
+    `Use ${mode} mode`
   );
 }
 
