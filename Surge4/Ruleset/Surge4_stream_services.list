@@ -23,34 +23,9 @@ DOMAIN-SUFFIX,channel4.com
 
 USER-AGENT,All4*
 
-# >> Amazon Prime Video
-DOMAIN,avodmp4s3ww-a.akamaihd.net
-DOMAIN,d1v5ir2lpwr8os.cloudfront.net
-DOMAIN,d22qjgkvxw22r6.cloudfront.net
-DOMAIN,d25xi40x97liuc.cloudfront.net
-DOMAIN,dmqdd6hw24ucf.cloudfront.net
-
-DOMAIN-KEYWORD,avoddashs
-
-DOMAIN-SUFFIX,aiv-cdn.net
-DOMAIN-SUFFIX,aiv-delivery.net
-DOMAIN-SUFFIX,amazonvideo.com
-DOMAIN-SUFFIX,media-amazon.com
-DOMAIN-SUFFIX,primevideo.com
-
-USER-AGENT,InstantVideo.US*
-USER-AGENT,Prime%20Video*
 # >> Apple TV
 DOMAIN,ocvideo.apple.com
 
-# >> Bahamut
-DOMAIN,gamer-cds.cdn.hinet.net
-DOMAIN,gamer2-cds.cdn.hinet.net
-
-DOMAIN-SUFFIX,bahamut.com.tw
-DOMAIN-SUFFIX,gamer.com.tw
-
-USER-AGENT,Anime*
 
 # >> BBC
 DOMAIN-KEYWORD,bbcfmt
@@ -76,15 +51,6 @@ DOMAIN-SUFFIX,deezer.com
 DOMAIN-SUFFIX,dzcdn.net
 USER-AGENT,Deezer*
 
-# > Disney+
-DOMAIN,cdn.registerdisney.go.com
-
-DOMAIN-SUFFIX,bamgrid.com
-DOMAIN-SUFFIX,disney-plus.net
-DOMAIN-SUFFIX,disneyplus.com
-DOMAIN-SUFFIX,dssott.com
-
-USER-AGENT,Disney+*
 
 # >> encoreTVB
 DOMAIN,bcbolt446c5271-a.akamaihd.net
@@ -205,37 +171,6 @@ DOMAIN-SUFFIX,tvb.com
 
 USER-AGENT,mytv*
 
-# >> Netflix
-DOMAIN-SUFFIX,netflix.com
-DOMAIN-SUFFIX,netflix.net
-DOMAIN-SUFFIX,netflixdnstest0.com
-DOMAIN-SUFFIX,netflixdnstest1.com
-DOMAIN-SUFFIX,netflixdnstest2.com
-DOMAIN-SUFFIX,netflixdnstest3.com
-DOMAIN-SUFFIX,netflixdnstest4.com
-DOMAIN-SUFFIX,netflixdnstest5.com
-DOMAIN-SUFFIX,netflixdnstest6.com
-DOMAIN-SUFFIX,netflixdnstest7.com
-DOMAIN-SUFFIX,netflixdnstest8.com
-DOMAIN-SUFFIX,netflixdnstest9.com
-DOMAIN-SUFFIX,nflxext.com
-DOMAIN-SUFFIX,nflximg.com
-DOMAIN-SUFFIX,nflximg.net
-DOMAIN-SUFFIX,nflxsearch.net
-DOMAIN-SUFFIX,nflxso.net
-DOMAIN-SUFFIX,nflxvideo.net
-
-IP-CIDR,23.246.0.0/18,no-resolve
-IP-CIDR,37.77.184.0/21,no-resolve
-IP-CIDR,45.57.0.0/17,no-resolve
-IP-CIDR,64.120.128.0/17,no-resolve
-IP-CIDR,66.197.128.0/17,no-resolve
-IP-CIDR,108.175.32.0/20,no-resolve
-IP-CIDR,192.173.64.0/18,no-resolve
-IP-CIDR,198.38.96.0/19,no-resolve
-IP-CIDR,198.45.48.0/20,no-resolve
-
-USER-AGENT,Argo*
 
 # >> niconico
 DOMAIN-SUFFIX,dmc.nico
@@ -313,16 +248,6 @@ DOMAIN,dfp6rglgjqszk.cloudfront.net
 DOMAIN-SUFFIX,viu.com
 DOMAIN-SUFFIX,viu.tv
 USER-AGENT,Viu*
-
-# >> Youtube
-DOMAIN,youtubei.googleapis.com
-
-DOMAIN-SUFFIX,googlevideo.com
-DOMAIN-SUFFIX,youtube.com
-
-USER-AGENT,com.google.ios.youtube*
-USER-AGENT,YouTube*
-USER-AGENT,YouTubeMusic*
 
 # >> SHOWTIME
 DOMAIN-SUFFIX,sho.com
