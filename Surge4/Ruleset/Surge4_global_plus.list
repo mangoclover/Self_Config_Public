@@ -34,6 +34,12 @@ DOMAIN-SUFFIX,twimg.com,force-remote-dns
 DOMAIN-SUFFIX,twitpic.com,force-remote-dns
 DOMAIN-SUFFIX,twitter.com,force-remote-dns
 
+# >> Instagram
+DOMAIN-SUFFIX,cdninstagram.com,force-remote-dns
+DOMAIN-SUFFIX,instagr.am,force-remote-dns
+DOMAIN-SUFFIX,instagram.com,force-remote-dns
+DOMAIN-KEYWORD,instagram,force-remote-dns
+
 # >> Line
 DOMAIN-SUFFIX,line.me,force-remote-dns
 DOMAIN-SUFFIX,line-apps.com,force-remote-dns
